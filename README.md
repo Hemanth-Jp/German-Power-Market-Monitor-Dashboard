@@ -186,4 +186,43 @@ For technical support or questions, please contact:
   - Data import functionality
   - Interactive filtering
 
+## Data Sources
+Data can be downloaded from the [SMARD Download Center](https://www.smard.de/en/downloadcenter/download-market-data/)
+
+### Files Used in This Project:
+1. **Generation Data**: `Actual_generation_202411010000_202412010000_Day.csv`
+   - Daily power generation by source
+   - Time period: November 2024
+   - Units: MWh
+
+2. **Price Data**: `Day-ahead_prices_202411010000_202412010000_Day.csv`
+   - Daily electricity prices
+   - Time period: November 2024
+   - Units: €/MWh
+   - Coverage: Germany and neighboring markets
+
+## Dashboard Features
+- Interactive visualization of energy generation mix
+- Day-ahead price comparison across markets
+- Date range selection
+- Source/country filtering
+- Statistical summaries
+
+## Required Packages
+```python
+import dash
+from dash import dcc, html
+from dash.dependencies import Input, Output, State
+import plotly.graph_objects as go
+import pandas as pd
+import numpy as np
+from datetime import datetime
+```
+
+## Dashboard Access
+Once you run this notebook, the dashboard will be available at:
+- Local access: http://127.0.0.1:8050
+- Network access: http://[your-ip-address]:8050
+
+
 
